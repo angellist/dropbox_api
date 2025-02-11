@@ -57,7 +57,14 @@ class DropboxController < ApplicationController
     client_id = "az8ykn83kecoodq"
     client_secret = "ozp1pxo8e563fc5"
 
-    DropboxApi::Authenticator.new(client_id, client_secret)
+    OAuth2::Client(
+            client_id,
+            client_secret,
+            {
+                    authorize_url: 'https://www.dropbox.com/oauth2/authorize',
+                    token_url: 'https://api.dropboxapi.com/oauth2/token'
+            }
+    )
   end
 
   def redirect_uri
