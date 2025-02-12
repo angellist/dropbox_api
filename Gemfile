@@ -31,4 +31,6 @@ group :development do
   # Code linting
   gem 'rubocop', require: false
   gem 'rubocop-rspec', require: false
+  gem 'rubocop-sorbet'
+
 end
