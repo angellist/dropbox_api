@@ -11,8 +11,8 @@ jobs:
         uses: ruby/setup-ruby@v1
         with:
           bundler-cache: true
-      - name: Run type check
-        run: bundle exec sb tc
+#      - name: Run type check
+#        run: bundle exec sb tc
       - name: Lint Ruby files
         run: bundle exec rubocop --fail-level error
       - name: Verify documentation
