@@ -1,56 +1,58 @@
 ---
 http_interactions:
-- request:
-    method: post
-    uri: https://api.dropboxapi.com/oauth2/token
-    body:
-      encoding: UTF-8
-      string: client_id=CLIENT_ID&client_secret=CLIENT_SECRET&code=ACCESS_CODEpLfs_y4vgnb3M&grant_type=authorization_code
-    headers:
-      User-Agent:
-      - Faraday v1.3.0
-      Content-Type:
-      - application/x-www-form-urlencoded
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Cache-Control:
-      - no-cache
-      X-Content-Type-Options:
-      - nosniff
-      X-Frame-Options:
-      - SAMEORIGIN
-      X-Server-Response-Time:
-      - '398'
-      Content-Type:
-      - text/javascript
-      Accept-Encoding:
-      - identity,gzip
-      Date:
-      - Wed, 29 Sep 2021 16:45:28 GMT
-      Server:
-      - envoy
-      Vary:
-      - Accept-Encoding
-      X-Dropbox-Response-Origin:
-      - far_remote
-      X-Dropbox-Request-Id:
-      - 8850e1c797e1405193d537535adbf514
-      Transfer-Encoding:
-      - chunked
-    body:
-      encoding: ASCII-8BIT
-      string: '{"uid": "44076342", "access_token": "MOCK_ACCESS_TOKEN",
-        "expires_in": 14399, "token_type": "bearer", "scope": "account_info.read account_info.write
-        contacts.read contacts.write file_requests.read file_requests.write files.content.read
-        files.content.write files.metadata.read files.metadata.write sharing.read
-        sharing.write", "refresh_token": "MOCK_REFRESH_TOKEN",
-        "account_id": "dbid:AABOLtA1rT6rRK4vajKZrWqLZ7wVnV863u4"}'
-  recorded_at: Wed, 29 Sep 2021 16:45:29 GMT
-recorded_with: VCR 6.0.0
+  - request:
+      method: post
+      uri: https://api.dropboxapi.com/oauth2/token
+      body:
+        encoding: UTF-8
+        string: code=ACCESS_CODE&grant_type=authorization_code
+      headers:
+        User-Agent:
+          - Faraday v2.12.2
+        Content-Type:
+          - application/x-www-form-urlencoded
+        Authorization:
+          - Basic Q0xJRU5UX0lEOkFDQ0VTU19DT0RF
+        Accept-Encoding:
+          - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+        Accept:
+          - "*/*"
+    response:
+      status:
+        code: 200
+        message: OK
+      headers:
+        Content-Type:
+          - application/json
+        Cache-Control:
+          - no-cache, no-store, must-revalidate
+        Expires:
+          - '0'
+        Pragma:
+          - no-cache
+        X-Content-Type-Options:
+          - nosniff
+        X-Frame-Options:
+          - SAMEORIGIN
+        X-Server-Response-Time:
+          - '463'
+        Date:
+          - Wed, 12 Feb 2025 20:19:59 GMT
+        Server:
+          - envoy
+        Vary:
+          - Accept-Encoding
+        X-Dropbox-Response-Origin:
+          - far_remote
+        X-Dropbox-Request-Id:
+          - 9ac71574cf1949168aee49f3b5b0d03d
+        Transfer-Encoding:
+          - chunked
+      body:
+        encoding: ASCII-8BIT
+        string: '{"access_token": "MOCK_ACCESS_TOKEN",
+        "token_type": "bearer", "expires_in": 14400, "refresh_token": "MOCK_REFRESH_TOKEN",
+        "scope": "account_info.read files.content.write files.metadata.read sharing.read
+        sharing.write", "uid": "2532732817", "account_id": "dbid:AADwrcYx4B08dp5mM5-UzqDuAlLSRDuj0ms"}'
+    recorded_at: Wed, 12 Feb 2025 20:19:59 GMT
+recorded_with: VCR 6.3.1

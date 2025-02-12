@@ -5,45 +5,48 @@ http_interactions:
     uri: https://api.dropboxapi.com/oauth2/token
     body:
       encoding: UTF-8
-      string: client_id=CLIENT_ID&client_secret=CLIENT_SECRET&grant_type=refresh_token&refresh_token=MOCK_REFRESH_TOKEN
+      string: grant_type=refresh_token&refresh_token=MOCK_REFRESH_TOKEN
     headers:
       User-Agent:
-      - Faraday v1.3.0
+      - Faraday v2.12.2
       Content-Type:
       - application/x-www-form-urlencoded
+      Authorization:
+      - Basic Q0xJRU5UX0lEOkNMSUVOVF9TRUNSRVQ=
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
       - "*/*"
   response:
+    status:response:
     status:
       code: 200
       message: OK
     headers:
       Cache-Control:
-      - no-cache
+        - no-cache
       X-Content-Type-Options:
-      - nosniff
+        - nosniff
       X-Frame-Options:
-      - SAMEORIGIN
+        - SAMEORIGIN
       X-Server-Response-Time:
-      - '37'
+        - '37'
       Content-Type:
-      - text/javascript
+        - text/javascript
       Accept-Encoding:
-      - identity,gzip
+        - identity,gzip
       Date:
-      - Wed, 29 Sep 2021 16:27:40 GMT
+        - Wed, 29 Sep 2021 16:27:40 GMT
       Server:
-      - envoy
+        - envoy
       Vary:
-      - Accept-Encoding
+        - Accept-Encoding
       X-Dropbox-Response-Origin:
-      - far_remote
+        - far_remote
       X-Dropbox-Request-Id:
-      - 10e9bf0dd61e462ca092aff976abcd45
+        - 10e9bf0dd61e462ca092aff976abcd45
       Transfer-Encoding:
-      - chunked
+        - chunked
     body:
       encoding: ASCII-8BIT
       string: '{"token_type": "bearer", "access_token": "MOCK_ACCESS_TOKEN",
@@ -57,44 +60,44 @@ http_interactions:
       string: '{"recursive":false,"include_media_info":false,"include_deleted":false,"path":""}'
     headers:
       Authorization:
-      - Bearer MOCK_ACCESS_TOKEN
+        - Bearer MOCK_ACCESS_TOKEN
       User-Agent:
-      - Faraday v1.3.0
+        - Faraday v1.3.0
       Content-Type:
-      - application/json
+        - application/json
       Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+        - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
-      - "*/*"
+        - "*/*"
   response:
     status:
       code: 200
       message: OK
     headers:
       Cache-Control:
-      - no-cache
+        - no-cache
       X-Content-Type-Options:
-      - nosniff
+        - nosniff
       X-Frame-Options:
-      - SAMEORIGIN
+        - SAMEORIGIN
       X-Server-Response-Time:
-      - '124'
+        - '124'
       Content-Type:
-      - application/json
+        - application/json
       Accept-Encoding:
-      - identity,gzip
+        - identity,gzip
       Date:
-      - Wed, 29 Sep 2021 16:27:41 GMT
+        - Wed, 29 Sep 2021 16:27:41 GMT
       Server:
-      - envoy
+        - envoy
       Vary:
-      - Accept-Encoding
+        - Accept-Encoding
       X-Dropbox-Response-Origin:
-      - far_remote
+        - far_remote
       X-Dropbox-Request-Id:
-      - d70c0ab18549441fa30c76b0fd63e703
+        - d70c0ab18549441fa30c76b0fd63e703
       Transfer-Encoding:
-      - chunked
+        - chunked
     body:
       encoding: ASCII-8BIT
       string: '{"entries": [{".tag": "folder", "name": "PleaseLetMeTest''s shared
@@ -124,4 +127,4 @@ http_interactions:
         "cursor": "AAFHnM-0aZjDkwZWbd6GjbSLfmk7p5AZ0KVn-JBta3HJtW4mne4nKWyweQkMa4b4mYw4yvvRRMq6aY4wjPNCTI60g0vxn89wTbM5GZtzpIvH05GhnVPlDtWjqMVf_sPis8eoogifXvIsxrELLdgq3zUQSCvG3raE4VuhU9i2BPlPkp3ewECVG170d0PYoey8Ao4",
         "has_more": false}'
   recorded_at: Wed, 29 Sep 2021 16:27:41 GMT
-recorded_with: VCR 6.0.0
+recorded_with: VCR 6.3.1

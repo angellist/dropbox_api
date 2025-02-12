@@ -6,7 +6,7 @@ module DropboxApi
     def initialize(oauth_bearer = nil, access_token: nil, on_token_refreshed: nil)
       if access_token
         if !access_token.is_a?(OAuth2::AccessToken)
-          raise ArgumentError, "access_token should be an OAuth2::AccessToken"
+          raise ArgumentError, 'access_token should be an OAuth2::AccessToken'
         end
 
         @access_token = access_token
@@ -14,7 +14,7 @@ module DropboxApi
       elsif oauth_bearer
         @oauth_bearer = oauth_bearer
       else
-        raise ArgumentError, "Either oauth_bearer or access_token should be set"
+        raise ArgumentError, 'Either oauth_bearer or access_token should be set'
       end
     end
 
