@@ -18,7 +18,7 @@ jobs:
 #      - name: Verify documentation
 #        run: bin/docs
       - name: Run tests
-        run: rake spec
+        run: bundle exec rake spec
 #      - name: Verify gem RBIs are up-to-date
 #        run: bin/tapioca gem --verify
 #      - name: Verify duplicates in shims
