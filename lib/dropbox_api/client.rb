@@ -14,7 +14,7 @@ module DropboxApi
       elsif oauth_bearer
         @connection_builder = ConnectionBuilder.new(oauth_bearer)
       else
-        raise ArgumentError, "Either oauth_bearer or access_token should be set"
+        raise ArgumentError, 'Either oauth_bearer or access_token should be set'
       end
     end
 

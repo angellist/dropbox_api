@@ -1,3 +1,7 @@
+require:
+  - rubocop-sorbet
+  - rubocop-rspec
+
 AllCops:
   DisabledByDefault: true
 
@@ -13,3 +17,8 @@ Style/RedundantFreeze:
 
 Style/StringLiterals:
   EnforcedStyle: single_quotes
+
+RSpec:
+  Exclude:
+    - 'spec/**/*'
+
